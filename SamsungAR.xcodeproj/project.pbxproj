@@ -7,17 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		272AA291233D90CB0083E9FC /* FurnitureItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272AA28B233D90CB0083E9FC /* FurnitureItemCell.swift */; };
+		272AA292233D90CB0083E9FC /* PlusMenuCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272AA28C233D90CB0083E9FC /* PlusMenuCollectionHeader.swift */; };
+		272AA293233D90CB0083E9FC /* FurnitureItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 272AA28D233D90CB0083E9FC /* FurnitureItemCell.xib */; };
+		272AA294233D90CB0083E9FC /* PlusMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272AA28E233D90CB0083E9FC /* PlusMenuViewController.swift */; };
+		272AA295233D90CB0083E9FC /* PlusMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272AA28F233D90CB0083E9FC /* PlusMenuViewModel.swift */; };
+		272AA296233D90CB0083E9FC /* PlusMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272AA290233D90CB0083E9FC /* PlusMenu.storyboard */; };
 		273E5795233B5CCB0007681F /* wm_icon_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 273E5794233B5CCB0007681F /* wm_icon_camera.png */; };
 		279804552339A33F005122FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279804542339A33F005122FD /* AppDelegate.swift */; };
 		2798045C2339A340005122FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2798045B2339A340005122FD /* Assets.xcassets */; };
 		2798045F2339A340005122FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2798045D2339A340005122FD /* LaunchScreen.storyboard */; };
 		2798046A2339A340005122FD /* SamsungARTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279804692339A340005122FD /* SamsungARTests.swift */; };
 		279804752339A340005122FD /* SamsungARUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279804742339A340005122FD /* SamsungARUITests.swift */; };
-		2798048A2339A3A4005122FD /* FurnitureItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279804832339A3A4005122FD /* FurnitureItemCell.swift */; };
-		2798048B2339A3A4005122FD /* FurnitureItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 279804842339A3A4005122FD /* FurnitureItemCell.xib */; };
-		2798048D2339A3A4005122FD /* PlusMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279804862339A3A4005122FD /* PlusMenuViewController.swift */; };
-		2798048E2339A3A4005122FD /* PlusMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279804872339A3A4005122FD /* PlusMenuViewModel.swift */; };
-		2798048F2339A3A4005122FD /* PlusMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279804882339A3A4005122FD /* PlusMenu.storyboard */; };
 		279804922339A3AC005122FD /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 279804912339A3AC005122FD /* art.scnassets */; };
 		279804962339A3B5005122FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279804942339A3B5005122FD /* ViewController.swift */; };
 		279804972339A3B5005122FD /* OverlayPlane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279804952339A3B5005122FD /* OverlayPlane.swift */; };
@@ -38,7 +39,6 @@
 		27A69873233A06AD002CAFF1 /* ViewDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A69872233A06AD002CAFF1 /* ViewDetailsViewController.swift */; };
 		27A69875233A06B6002CAFF1 /* ViewDetailsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A69874233A06B6002CAFF1 /* ViewDetailsVM.swift */; };
 		27CF9F792339B386000644ED /* dummyAppliance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF9F782339B386000644ED /* dummyAppliance.swift */; };
-		27CF9F7F2339B50C000644ED /* PlusMenuCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF9F7E2339B50C000644ED /* PlusMenuCollectionHeader.swift */; };
 		27CF9F812339CCF5000644ED /* Appliance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF9F802339CCF5000644ED /* Appliance.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +60,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		272AA28B233D90CB0083E9FC /* FurnitureItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FurnitureItemCell.swift; sourceTree = "<group>"; };
+		272AA28C233D90CB0083E9FC /* PlusMenuCollectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusMenuCollectionHeader.swift; sourceTree = "<group>"; };
+		272AA28D233D90CB0083E9FC /* FurnitureItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FurnitureItemCell.xib; sourceTree = "<group>"; };
+		272AA28E233D90CB0083E9FC /* PlusMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusMenuViewController.swift; sourceTree = "<group>"; };
+		272AA28F233D90CB0083E9FC /* PlusMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusMenuViewModel.swift; sourceTree = "<group>"; };
+		272AA290233D90CB0083E9FC /* PlusMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlusMenu.storyboard; sourceTree = "<group>"; };
 		273E5794233B5CCB0007681F /* wm_icon_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wm_icon_camera.png; sourceTree = "<group>"; };
 		279804512339A33F005122FD /* SamsungAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamsungAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		279804542339A33F005122FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,11 +78,6 @@
 		279804702339A340005122FD /* SamsungARUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SamsungARUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		279804742339A340005122FD /* SamsungARUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamsungARUITests.swift; sourceTree = "<group>"; };
 		279804762339A340005122FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		279804832339A3A4005122FD /* FurnitureItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FurnitureItemCell.swift; sourceTree = "<group>"; };
-		279804842339A3A4005122FD /* FurnitureItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FurnitureItemCell.xib; sourceTree = "<group>"; };
-		279804862339A3A4005122FD /* PlusMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusMenuViewController.swift; sourceTree = "<group>"; };
-		279804872339A3A4005122FD /* PlusMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusMenuViewModel.swift; sourceTree = "<group>"; };
-		279804882339A3A4005122FD /* PlusMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlusMenu.storyboard; sourceTree = "<group>"; };
 		279804912339A3AC005122FD /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		279804942339A3B5005122FD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		279804952339A3B5005122FD /* OverlayPlane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayPlane.swift; sourceTree = "<group>"; };
@@ -97,7 +98,6 @@
 		27A69872233A06AD002CAFF1 /* ViewDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDetailsViewController.swift; sourceTree = "<group>"; };
 		27A69874233A06B6002CAFF1 /* ViewDetailsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDetailsVM.swift; sourceTree = "<group>"; };
 		27CF9F782339B386000644ED /* dummyAppliance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummyAppliance.swift; sourceTree = "<group>"; };
-		27CF9F7E2339B50C000644ED /* PlusMenuCollectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusMenuCollectionHeader.swift; sourceTree = "<group>"; };
 		27CF9F802339CCF5000644ED /* Appliance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appliance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +126,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		272AA28A233D90CB0083E9FC /* PlusMenu */ = {
+			isa = PBXGroup;
+			children = (
+				272AA28B233D90CB0083E9FC /* FurnitureItemCell.swift */,
+				272AA28C233D90CB0083E9FC /* PlusMenuCollectionHeader.swift */,
+				272AA28D233D90CB0083E9FC /* FurnitureItemCell.xib */,
+				272AA28E233D90CB0083E9FC /* PlusMenuViewController.swift */,
+				272AA28F233D90CB0083E9FC /* PlusMenuViewModel.swift */,
+				272AA290233D90CB0083E9FC /* PlusMenu.storyboard */,
+			);
+			path = PlusMenu;
+			sourceTree = "<group>";
+		};
 		279804482339A33F005122FD = {
 			isa = PBXGroup;
 			children = (
@@ -149,11 +162,11 @@
 		279804532339A33F005122FD /* SamsungAR */ = {
 			isa = PBXGroup;
 			children = (
+				272AA28A233D90CB0083E9FC /* PlusMenu */,
 				279804982339A3BD005122FD /* ImageFiles */,
 				279804932339A3B5005122FD /* ARView */,
 				279804912339A3AC005122FD /* art.scnassets */,
 				27A6986F233A0683002CAFF1 /* ViewDetail */,
-				279804822339A3A4005122FD /* PlusMenu */,
 				279804542339A33F005122FD /* AppDelegate.swift */,
 				2798045B2339A340005122FD /* Assets.xcassets */,
 				279804AD2339A41A005122FD /* Main.storyboard */,
@@ -181,20 +194,6 @@
 				279804762339A340005122FD /* Info.plist */,
 			);
 			path = SamsungARUITests;
-			sourceTree = "<group>";
-		};
-		279804822339A3A4005122FD /* PlusMenu */ = {
-			isa = PBXGroup;
-			children = (
-				279804832339A3A4005122FD /* FurnitureItemCell.swift */,
-				279804842339A3A4005122FD /* FurnitureItemCell.xib */,
-				279804862339A3A4005122FD /* PlusMenuViewController.swift */,
-				279804872339A3A4005122FD /* PlusMenuViewModel.swift */,
-				279804882339A3A4005122FD /* PlusMenu.storyboard */,
-				27CF9F7E2339B50C000644ED /* PlusMenuCollectionHeader.swift */,
-			);
-			name = PlusMenu;
-			path = "../../../Downloads/yh-AR/ARFoodFinal/PlusMenu";
 			sourceTree = "<group>";
 		};
 		279804932339A3B5005122FD /* ARView */ = {
@@ -355,19 +354,19 @@
 				279804A42339A3BD005122FD /* tron_grid.png in Resources */,
 				27A6986E2339FA08002CAFF1 /* UN40LS001AF.png in Resources */,
 				279804A72339A3BD005122FD /* wood.jpg in Resources */,
+				272AA296233D90CB0083E9FC /* PlusMenu.storyboard in Resources */,
 				279804AF2339A41A005122FD /* Main.storyboard in Resources */,
 				27A6986C2339F9AD002CAFF1 /* QN65Q7FN.png in Resources */,
 				273E5795233B5CCB0007681F /* wm_icon_camera.png in Resources */,
 				279804AB2339A3BD005122FD /* camera.png in Resources */,
 				279804A92339A3BD005122FD /* exit.png in Resources */,
 				279804A52339A3BD005122FD /* Icon-X.png in Resources */,
-				2798048B2339A3A4005122FD /* FurnitureItemCell.xib in Resources */,
+				272AA293233D90CB0083E9FC /* FurnitureItemCell.xib in Resources */,
 				2798045C2339A340005122FD /* Assets.xcassets in Resources */,
 				279804AC2339A3BD005122FD /* overlay_grid.png in Resources */,
 				279804922339A3AC005122FD /* art.scnassets in Resources */,
 				279804A82339A3BD005122FD /* sheriff_cover.png in Resources */,
 				27A69871233A0692002CAFF1 /* ViewDetail.storyboard in Resources */,
-				2798048F2339A3A4005122FD /* PlusMenu.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,15 +393,15 @@
 			files = (
 				27A69875233A06B6002CAFF1 /* ViewDetailsVM.swift in Sources */,
 				27CF9F792339B386000644ED /* dummyAppliance.swift in Sources */,
-				2798048E2339A3A4005122FD /* PlusMenuViewModel.swift in Sources */,
-				2798048A2339A3A4005122FD /* FurnitureItemCell.swift in Sources */,
 				279804552339A33F005122FD /* AppDelegate.swift in Sources */,
 				279804962339A3B5005122FD /* ViewController.swift in Sources */,
+				272AA292233D90CB0083E9FC /* PlusMenuCollectionHeader.swift in Sources */,
 				27CF9F812339CCF5000644ED /* Appliance.swift in Sources */,
+				272AA295233D90CB0083E9FC /* PlusMenuViewModel.swift in Sources */,
+				272AA291233D90CB0083E9FC /* FurnitureItemCell.swift in Sources */,
+				272AA294233D90CB0083E9FC /* PlusMenuViewController.swift in Sources */,
 				27A69873233A06AD002CAFF1 /* ViewDetailsViewController.swift in Sources */,
-				2798048D2339A3A4005122FD /* PlusMenuViewController.swift in Sources */,
 				279804972339A3B5005122FD /* OverlayPlane.swift in Sources */,
-				27CF9F7F2339B50C000644ED /* PlusMenuCollectionHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

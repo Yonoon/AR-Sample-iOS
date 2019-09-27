@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--PlusMenuViewController-->
+        <scene sceneID="7xw-VI-YpE">
+            <objects>
+                <viewController storyboardIdentifier="PlusMenuViewController" title="PlusMenuViewController" id="LMl-ZK-vLm" customClass="PlusMenuViewController" customModule="SamsungAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y0F-iE-ib4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBs-ZT-zXo">
+                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This is Plus Menu VIew" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMV-q5-A8h">
+                                        <rect key="frame" x="120" y="293" width="175" height="123"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPN-XA-Qx2">
+                                        <rect key="frame" x="374" y="20" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="KFB-1w-LLM"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="i0U-vC-V5P"/>
+                                            <constraint firstAttribute="width" constant="30" id="oMo-Fb-agq"/>
+                                            <constraint firstAttribute="height" constant="30" id="tcr-Zz-BzA"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="Icon-X-Grey.png"/>
+                                        <connections>
+                                            <action selector="popToARScene:" destination="LMl-ZK-vLm" eventType="touchUpInside" id="sYF-tP-xle"/>
+                                        </connections>
+                                    </button>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LEL-Cu-lch">
+                                        <rect key="frame" x="0.0" y="90" width="414" height="662"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="662" id="7np-o1-L1j"/>
+                                        </constraints>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eNa-YU-sw8">
+                                            <size key="itemSize" width="100" height="140"/>
+                                            <size key="headerReferenceSize" width="50" height="30"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="FurnitureItemCell" reuseIdentifier="FurnitureItemCell" id="703-OF-Dr4" customClass="FurnitureItemCell" customModule="SamsungAR" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="30" width="100" height="140"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="140"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </view>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="PlusMenuCollectionHeader" reuseIdentifier="PlusMenuCollectionHeader" id="6zC-5J-B0v" customClass="PlusMenuCollectionHeader" customModule="SamsungAR" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4m5-8C-b4b">
+                                                    <rect key="frame" x="10" y="5.5" width="39.5" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="4m5-8C-b4b" firstAttribute="centerY" secondItem="6zC-5J-B0v" secondAttribute="centerY" id="EVn-eS-rus"/>
+                                                <constraint firstItem="4m5-8C-b4b" firstAttribute="leading" secondItem="6zC-5J-B0v" secondAttribute="leading" constant="10" id="Fld-BX-KxD"/>
+                                            </constraints>
+                                            <connections>
+                                                <outlet property="headerTitle" destination="4m5-8C-b4b" id="fSd-gG-sJo"/>
+                                            </connections>
+                                        </collectionReusableView>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="LEL-Cu-lch" firstAttribute="top" secondItem="xPN-XA-Qx2" secondAttribute="bottom" constant="40" id="AdU-Pg-Pkb"/>
+                                    <constraint firstAttribute="trailing" secondItem="xPN-XA-Qx2" secondAttribute="trailing" constant="10" id="DeN-VM-FOb"/>
+                                    <constraint firstItem="LEL-Cu-lch" firstAttribute="leading" secondItem="nBs-ZT-zXo" secondAttribute="leading" id="J6O-km-ye1"/>
+                                    <constraint firstAttribute="bottom" secondItem="LEL-Cu-lch" secondAttribute="bottom" id="KnC-kC-8N3"/>
+                                    <constraint firstAttribute="trailing" secondItem="LEL-Cu-lch" secondAttribute="trailing" id="XFI-xl-nyq"/>
+                                    <constraint firstAttribute="bottom" secondItem="LEL-Cu-lch" secondAttribute="bottom" id="lBZ-bC-Bxz"/>
+                                    <constraint firstItem="LEL-Cu-lch" firstAttribute="leading" secondItem="nBs-ZT-zXo" secondAttribute="leading" id="sk4-qI-h81"/>
+                                    <constraint firstItem="xPN-XA-Qx2" firstAttribute="top" secondItem="nBs-ZT-zXo" secondAttribute="top" constant="20" id="sw6-x5-KiJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="LEL-Cu-lch" secondAttribute="trailing" id="wnZ-7V-Lhy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nBs-ZT-zXo" firstAttribute="leading" secondItem="sh8-xu-5uV" secondAttribute="leading" id="2Rg-HR-SYK"/>
+                            <constraint firstAttribute="bottom" secondItem="nBs-ZT-zXo" secondAttribute="bottom" id="ZmL-E4-4G7"/>
+                            <constraint firstItem="nBs-ZT-zXo" firstAttribute="top" secondItem="sh8-xu-5uV" secondAttribute="top" constant="100" id="nRB-BW-hMY"/>
+                            <constraint firstItem="nBs-ZT-zXo" firstAttribute="trailing" secondItem="sh8-xu-5uV" secondAttribute="trailing" id="wEF-gy-i9j"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sh8-xu-5uV"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="LEL-Cu-lch" id="xtn-sR-DNR"/>
+                        <outlet property="plusView" destination="nBs-ZT-zXo" id="eRY-Dx-0fS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3io-7Q-gs8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="153.62318840579712" y="89.732142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Icon-X-Grey.png" width="60" height="60"/>
+    </resources>
+</document>
