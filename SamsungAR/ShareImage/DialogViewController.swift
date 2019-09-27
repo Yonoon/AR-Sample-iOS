@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MessageUI
 
 public class DialogViewController: UIViewController {
 
@@ -64,8 +65,8 @@ public class DialogViewController: UIViewController {
 
     @IBAction func eMail_Estimate(_ sender: Any) {
        // action(secondButtonText)
-
-        selfDestruct()
+        sendMail()
+       // selfDestruct()
     }
 
     @IBAction func cancel(_ sender: Any) {
@@ -89,4 +90,32 @@ public class DialogViewController: UIViewController {
     }
 
 
+}
+
+extension DialogViewController: MFMailComposeViewControllerDelegate {
+    func sendMail() {
+
+        if MFMailComposeViewController.canSendMail() {
+            self.present(configuredMailComposeViewController(), animated: true, completion: nil)
+        } else {
+            print("Can't Send Mail Now")
+        }
+    }
+
+
+    func configuredMailComposeViewController() -> MFMailComposeViewController {
+
+        let composeVC = MFMailComposeViewController()
+        composeVC.mailComposeDelegate = self as MFMailComposeViewControllerDelegate
+         composeVC.setCcRecipients(["digital@plaza.com"]) //수신
+        composeVC.setSubject("[견적 요청]") //제목
+        composeVC.setMessageBody("견적 내주세여!!", isHTML: false) //본문
+        let imageData: Data = image.pngData()!
+        composeVC.addAttachmentData(imageData, mimeType: "image/png", fileName: "capture.png")
+        return composeVC
+    }
+
+    public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
 }
