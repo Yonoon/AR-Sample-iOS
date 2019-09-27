@@ -39,6 +39,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         self.sceneView = ARSCNView(frame : self.view.frame)
         self.view.addSubview(sceneView)
         addPlusButton()
+        addCameraButton()
       //  self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         
         // Register delegate
@@ -100,6 +101,34 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         button.addTarget(self, action: #selector(showPlusMenu), for: .touchUpInside)
         self.view.addSubview(button)
     }
+
+    func addCameraButton() {
+        let button = UIButton()
+        print("width \(self.view.frame.size.width), height: \(self.view.frame.size.height)")
+        button.frame = CGRect(x: self.view.frame.size.width - 65, y: self.view.frame.size.height - 100, width: 55, height: 55)
+        button.setImage(UIImage(named: "camera.png"), for: .normal)
+        button.backgroundColor = UIColor.clear
+
+        button.addTarget(self, action: #selector(captureARScene), for: .touchUpInside)
+        self.view.addSubview(button)
+    }
+
+    @objc func captureARScene() {
+        let image = sceneView.snapshot()
+        print("debug Snapshoe")
+
+        let storyboard = UIStoryboard(name: "DialogView", bundle: nil)
+        let DialogViewController = storyboard.instantiateViewController(withIdentifier: "DialogViewController") as? DialogViewController
+        DialogViewController?.modalPresentationStyle = .overCurrentContext
+        if let DialogViewController = DialogViewController {
+            DialogViewController.image = image
+            self.present(DialogViewController, animated: true, completion: nil)
+        }
+        //DO SOMETHING
+        //SHARE IMAGE
+    }
+
+
     
     @objc func showPlusMenu(sender: UIButton!) {
         print("button Pressed")
@@ -116,67 +145,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
     }
     
-    private func addObject(hitResult :ARHitTestResult) {
-
-//        let baseScene = SCNScene(named: "art.scnassets/Refrigerator/refri.dae")
-//        guard let baseNode = baseScene?.rootNode.childNode(withName: "refri", recursively: true) else {
-//            print("CAN NOT FIND ASSET")
-//            return
-//        }
-
-//        let baseScene = SCNScene(named: "art.scnassets/TV/Seriff/UN40LS001AF.dae")
-//        guard let baseNode = baseScene?.rootNode.childNode(withName: "UN40LS001AF", recursively: true) else {
-//            print("CAN NOT FIND ASSET")
-//            return
-//        }
-
-        let baseNode  = selectedNode
-
-        baseNode.position = SCNVector3(hitResult.worldTransform.columns.3.x,hitResult.worldTransform.columns.3.y ,hitResult.worldTransform.columns.3.z)
-        
 
 
-        let material = SCNMaterial()
-        if (selectedNode.name ==  "QN65Q7FN") {
-            material.roughness.contents = UIImage(named: "art.scnassets/TV/QLED/Roughness.png")
-            material.metalness.contents = UIImage(named: "art.scnassets/TV/QLED/Metalic.png")
-            material.normal.contents = UIImage(named: "art.scnassets/TV/QLED/Normal.png")
-            material.normal.intensity = 0.5
-            material.diffuse.contents = UIImage(named: "art.scnassets/TV/QLED/BaseColor.png")
-
-            baseNode.geometry?.firstMaterial = material
-        }
-
-        //스케일 조정 - width, height, depth를 원래 크기의 0.01 만큼으로 줄여줌
-        baseNode.scale = SCNVector3(0.01,0.01,0.01)
-        
-        //메인 씬에 추가해줌
-        self.sceneView.scene.rootNode.addChildNode(baseNode)
-    }
-    
-    
-    func addBox(hitResult: ARHitTestResult) {
-        //빨간 상자 만듬
-        let boxGeometry = SCNBox(width: 0.2, height: 0.2, length: 0.1, chamferRadius: 0)
-        let material = SCNMaterial()
-        material.diffuse.contents = UIColor.lightGray
-        boxGeometry.materials = [material]
-        let boxNode = SCNNode(geometry: boxGeometry)
-        
-        //위치 지정
-        //hitResult 는 많은 속성을 가지고 있는데 그 중 worldTransform.columns통해 현실에 대응하는 x, y, z 좌표를 알 수 있음
-        //Float(boxGeometry.height/2) 를 더해준 이유는 boxNode의 center y 좌표가 hitResult.worldTransform.columns.3.y 가 된다면 평면에서 반만큼 내려가 보이기 때문
-        boxNode.position = SCNVector3(hitResult.worldTransform.columns.3.x,hitResult.worldTransform.columns.3.y + Float(boxGeometry.height), hitResult.worldTransform.columns.3.z)
-        
-        //        //떨어지는 효과
-        //        boxNode.physicsBody = SCNPhysicsBody(type: .dynamic, shape: nil)
-        //
-        //        //MARK: Collison
-        //        boxNode.physicsBody?.categoryBitMask = BodyType.box.rawValue
-        
-        //sceneView 에 적용
-        self.sceneView.scene.rootNode.addChildNode(boxNode)
-    }
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         if !(anchor is ARPlaneAnchor) {
@@ -328,7 +298,36 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             addObject(hitResult :hitResult)
         }
     }
-    
+
+    private func addObject(hitResult :ARHitTestResult) {
+
+        let baseNode  = selectedNode
+
+        //위치 지정
+        //hitResult 는 많은 속성을 가지고 있는데 그 중 worldTransform.columns통해 현실에 대응하는 x, y, z 좌표를 알 수 있음
+
+        baseNode.position = SCNVector3(hitResult.worldTransform.columns.3.x,hitResult.worldTransform.columns.3.y ,hitResult.worldTransform.columns.3.z)
+
+
+
+        let material = SCNMaterial()
+        //TODO: .dae에 직접 설정해줄 순 없는지..
+        if (selectedNode.name ==  "QN65Q7FN") {
+            material.roughness.contents = UIImage(named: "art.scnassets/TV/QLED/Roughness.png")
+            material.metalness.contents = UIImage(named: "art.scnassets/TV/QLED/Metalic.png")
+            material.normal.contents = UIImage(named: "art.scnassets/TV/QLED/Normal.png")
+            material.normal.intensity = 0.5
+            material.diffuse.contents = UIImage(named: "art.scnassets/TV/QLED/BaseColor.png")
+
+            baseNode.geometry?.firstMaterial = material
+        }
+
+        //스케일 조정 - width, height, depth를 원래 크기의 0.01 만큼으로 줄여줌
+        baseNode.scale = SCNVector3(0.003,0.003,0.003)
+
+        //메인 씬에 추가해줌
+        self.sceneView.scene.rootNode.addChildNode(baseNode)
+    }
     
     
     @objc func removeObject(gesture: UITapGestureRecognizer) {

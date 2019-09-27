@@ -26,7 +26,7 @@ class PlusMenuViewController: UIViewController {
         
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.register(UINib(nibName: "FurnitureItemCell", bundle: Bundle.main), forCellWithReuseIdentifier: "FurnitureItemCell")
+        collectionView.register(UINib(nibName: "ApplianceItemCell", bundle: Bundle.main), forCellWithReuseIdentifier: "ApplianceItemCell")
 
         vm.printVM()
 
@@ -67,8 +67,8 @@ extension PlusMenuViewController: UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FurnitureItemCell", for: indexPath) as? FurnitureItemCell else {
-            print("CAN NOT FIND FURNITURE CELL")
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ApplianceItemCell", for: indexPath) as? ApplianceItemCell else {
+            print("CAN NOT FIND ApplianceItemCell")
             return UICollectionViewCell()
         }
         cell.delegte = self

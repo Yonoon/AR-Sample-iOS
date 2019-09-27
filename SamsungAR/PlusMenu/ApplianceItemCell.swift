@@ -1,5 +1,5 @@
 //
-//  FurnitureItemCell.swift
+//  ApplianceItemCell.swift
 //  ARFoodFinal
 //
 //  Created by 박용훈 on 23/09/2019.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FurnitureItemCell: UICollectionViewCell {
+class ApplianceItemCell: UICollectionViewCell {
 
     @IBOutlet var btnDetails: UIButton!
     @IBOutlet weak var label: UILabel!
