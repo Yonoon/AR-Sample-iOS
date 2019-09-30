@@ -25,6 +25,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     var currentAngleY: Float = 0.0 // for rotate
     
+    var selectedNodelist =  [Appliance]()
+    var currentSelectedItem: Appliance!
+    
     @IBOutlet weak var label: UILabel!
     //카메라를 제어하고 장치에서 모든 센서 데이터를 수집하여 원활한 환경을 구축합니다
     @IBOutlet var sceneView: ARSCNView!
@@ -332,6 +335,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
         //메인 씬에 추가해줌
         self.sceneView.scene.rootNode.addChildNode(baseNode)
+        selectedNodelist.append(currentSelectedItem)
     }
     
     
@@ -339,6 +343,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let touchLocation = getTouchLocation(gesture: gesture)
         let nodeToRemove = getSelectedNode(touchLocation)
         nodeToRemove.removeFromParentNode()
+       
+        guard let removeIndex = selectedNodelist.firstIndex(where: {$0.model == nodeToRemove.name}) else { return }
+        selectedNodelist.remove(at: removeIndex)
+        
     }
     
     @objc func scaleObject(gesture: UIPinchGestureRecognizer) {
@@ -434,6 +442,7 @@ extension ViewController: SelectObjDelegate {
         }
 
         selectedNode = baseNode
+        currentSelectedItem = item
 
 
 
