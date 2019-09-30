@@ -25,6 +25,10 @@ class ViewDetailsViewController: UIViewController {
         setLabel()
 
         let scene = SCNScene(named: "art.scnassets/\(selectedItem.category)/\(selectedItem.type)/\(selectedItem.model).dae")
+        if selectedItem.type == "Microwave" {
+            let microwaveNode = scene?.rootNode.childNode(withName: selectedItem.model, recursively: false)
+            microwaveNode?.scale = SCNVector3(4,4,4) //microwave
+        }
         // 2: Add camera node
         let cameraNode = SCNNode()
         cameraNode.camera = SCNCamera()
@@ -44,7 +48,7 @@ class ViewDetailsViewController: UIViewController {
         let ambientLightNode = SCNNode()
         ambientLightNode.light = SCNLight()
         ambientLightNode.light?.type = .ambient
-        ambientLightNode.light?.color = UIColor.darkGray
+        ambientLightNode.light?.color = UIColor.white
         scene?.rootNode.addChildNode(ambientLightNode)
 
         // Allow user to manipulate camera
@@ -70,20 +74,6 @@ class ViewDetailsViewController: UIViewController {
         self.typeLabel.text = selectedItem?.type
     }
 
-//    func addExitButton() {
-//        let button = UIButton()
-//        print("width \(self.view.frame.size.width), height: \(self.view.frame.size.height)")
-//        button.frame = CGRect(x: self.view.frame.size.width - 45, y: 15, width: 30, height: 30)
-//        button.setImage(UIImage(named: "Icon-X-Gray.png"), for: .normal)
-//        button.backgroundColor = UIColor.clear
-//
-//        button.addTarget(self, action: #selector(popVC), for: .touchUpInside)
-//        self.view.addSubview(button)
-//    }
-//
-//    @objc func popVC() {
-//
-//    }
 
     @IBAction func popVC(_ sender: Any) {
          self.dismiss(animated: true, completion: nil)

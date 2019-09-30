@@ -42,6 +42,7 @@
 		27CAFC73233DF080006F1496 /* DialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CAFC72233DF080006F1496 /* DialogViewController.swift */; };
 		27CF9F792339B386000644ED /* dummyAppliance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF9F782339B386000644ED /* dummyAppliance.swift */; };
 		27CF9F812339CCF5000644ED /* Appliance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF9F802339CCF5000644ED /* Appliance.swift */; };
+		6905805A2342268300E4A0CA /* PS50GAJUA.png in Resources */ = {isa = PBXBuildFile; fileRef = 690580592342268300E4A0CA /* PS50GAJUA.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		27CAFC72233DF080006F1496 /* DialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogViewController.swift; sourceTree = "<group>"; };
 		27CF9F782339B386000644ED /* dummyAppliance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummyAppliance.swift; sourceTree = "<group>"; };
 		27CF9F802339CCF5000644ED /* Appliance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appliance.swift; sourceTree = "<group>"; };
+		690580592342268300E4A0CA /* PS50GAJUA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PS50GAJUA.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				273E5794233B5CCB0007681F /* wm_icon_camera.png */,
+				690580592342268300E4A0CA /* PS50GAJUA.png */,
 				27A6986D2339FA08002CAFF1 /* UN40LS001AF.png */,
 				27A6986B2339F9AD002CAFF1 /* QN65Q7FN.png */,
 			);
@@ -375,6 +378,7 @@
 				273E5795233B5CCB0007681F /* wm_icon_camera.png in Resources */,
 				279804AB2339A3BD005122FD /* camera.png in Resources */,
 				279804A92339A3BD005122FD /* exit.png in Resources */,
+				6905805A2342268300E4A0CA /* PS50GAJUA.png in Resources */,
 				279804A52339A3BD005122FD /* Icon-X.png in Resources */,
 				272AA293233D90CB0083E9FC /* ApplianceItemCell.xib in Resources */,
 				2798045C2339A340005122FD /* Assets.xcassets in Resources */,

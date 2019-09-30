@@ -323,7 +323,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
 
         //스케일 조정 - width, height, depth를 원래 크기의 0.01 만큼으로 줄여줌
-        baseNode.scale = SCNVector3(0.003,0.003,0.003)
+        
+        if (selectedNode.name ==  "PS50GAJUA") {
+            baseNode.scale = SCNVector3(0.06,0.06,0.06) //microwave
+        } else {
+            baseNode.scale = SCNVector3(0.003,0.003,0.003)
+        }
 
         //메인 씬에 추가해줌
         self.sceneView.scene.rootNode.addChildNode(baseNode)
@@ -422,11 +427,12 @@ extension ViewController: SelectObjDelegate {
 
         let baseScene = SCNScene(named: "art.scnassets/\(item.category)/\(item.type)/\(item.model).dae")
 
-
+    
         guard let baseNode = baseScene?.rootNode.childNode(withName: "\(item.model)", recursively: true) else {
             print("CAN NOT FIND ASSET")
             return
         }
+
         selectedNode = baseNode
 
 
