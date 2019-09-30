@@ -9,7 +9,7 @@
 import UIKit
 
 protocol CollectionViewCellDelegte {
-    func collectionViewCellDelegte(didClickButtonAt index: Int)
+    func collectionViewCellDelegte(category: String, didClickButtonAt index: Int)
 }
 
 class PlusMenuViewController: UIViewController {
@@ -63,7 +63,8 @@ extension PlusMenuViewController: UICollectionViewDataSource, UICollectionViewDe
 
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return vm.appliances.count
+        let applianceList = vm.appliances.filter({$0.category == vm.categoryList[section]})
+        return applianceList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -73,14 +74,17 @@ extension PlusMenuViewController: UICollectionViewDataSource, UICollectionViewDe
         }
         cell.delegte = self
         cell.index = indexPath.row
-        cell.configure(vm.appliances[indexPath.row])
+        let applianceList = vm.appliances.filter({$0.category == vm.categoryList[indexPath.section]})
+        cell.configure(applianceList[indexPath.row])
+        
         //cell.collectionViewTest.label = collectionItems[indexPath.row]
         return cell
 
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate?.setSelectedObj(vm.appliances[indexPath.row])
+        let applianceList = vm.appliances.filter({$0.category == vm.categoryList[indexPath.section]})
+        delegate?.setSelectedObj(applianceList[indexPath.row])
         popVC()
     }
     
@@ -88,13 +92,16 @@ extension PlusMenuViewController: UICollectionViewDataSource, UICollectionViewDe
 }
 
 extension PlusMenuViewController: CollectionViewCellDelegte{
-    func collectionViewCellDelegte(didClickButtonAt index: Int) {
+    func collectionViewCellDelegte(category: String, didClickButtonAt index: Int) {
         print("button Pressed")
         let storyboard = UIStoryboard(name: "ViewDetail", bundle: nil)
         let ViewDetailsViewController = storyboard.instantiateViewController(withIdentifier: "ViewDetailsViewController") as? ViewDetailsViewController
 
         ViewDetailsViewController?.modalPresentationStyle = .overCurrentContext
-        ViewDetailsViewController?.selectedItem = vm.appliances[index]
+        
+        let applianceList = vm.appliances.filter({$0.category == category})
+       
+        ViewDetailsViewController?.selectedItem = applianceList[index]
         if let ViewDetailsViewController = ViewDetailsViewController {
 
             self.present(ViewDetailsViewController, animated: true, completion: nil)

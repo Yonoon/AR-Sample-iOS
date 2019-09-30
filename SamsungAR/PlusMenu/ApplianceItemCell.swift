@@ -15,6 +15,7 @@ class ApplianceItemCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     var delegte: CollectionViewCellDelegte? = nil
     var index: Int!
+    var category: String!
 
 
     override func awakeFromNib() {
@@ -32,12 +33,14 @@ class ApplianceItemCell: UICollectionViewCell {
     func configure(_ appliance: Appliance) {
         let modelTxt = appliance.model
         label.text = modelTxt
+        
+        category = appliance.category
         imageView.image = UIImage(named: "\(modelTxt).png")
     }
 
     @IBAction func showDetails(_ sender: Any) {
         if let del = self.delegte {
-            del.collectionViewCellDelegte(didClickButtonAt: index)
+            del.collectionViewCellDelegte(category: category, didClickButtonAt: index)
         }
     }
 }

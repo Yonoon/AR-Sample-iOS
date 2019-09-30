@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SamsungAR/ARView/ViewController.swift"
-            timestampString = "591538456.321046"
+            timestampString = "591539393.015484"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "428"
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SamsungAR/PlusMenu/PlusMenuViewController.swift"
-            timestampString = "591538456.321117"
+            timestampString = "591539393.0155571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "collectionView(_:didSelectItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SamsungAR/ViewDetail/ViewDetailsViewController.swift"
-            timestampString = "591538456.321166"
+            timestampString = "591539393.0158989"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SamsungAR/ViewDetail/ViewDetailsViewController.swift"
-            timestampString = "591538456.32149"
+            timestampString = "591539393.015949"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -74,12 +74,124 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SamsungAR/ViewDetail/ViewDetailsViewController.swift"
-            timestampString = "591538456.32172"
+            timestampString = "591539393.015993"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
             endingLineNumber = "33"
             landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SamsungAR/PlusMenu/PlusMenuViewController.swift"
+            timestampString = "591539393.016036"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SamsungAR/PlusMenu/PlusMenuViewController.swift"
+            timestampString = "591539403.690498"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "collectionViewCellDelegte(category:didClickButtonAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SamsungAR/PlusMenu/PlusMenuViewController.swift"
+            timestampString = "591539404.230971"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "collectionViewCellDelegte(category:didClickButtonAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SamsungAR.PlusMenuViewController.collectionViewCellDelegte(category: Swift.String, didClickButtonAt: Swift.Int) -&gt; ()"
+                  moduleName = "SamsungAR"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yonghoon/code/ar/SamsungAR/PlusMenu/PlusMenuViewController.swift"
+                  timestampString = "591539404.7624919"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "752">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SamsungAR.Appliance) -&gt; Swift.Bool in SamsungAR.PlusMenuViewController.collectionViewCellDelegte(category: Swift.String, didClickButtonAt: Swift.Int) -&gt; ()"
+                  moduleName = "SamsungAR"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/yonghoon/code/ar/SamsungAR/PlusMenu/PlusMenuViewController.swift"
+                  timestampString = "591539404.7658761"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SamsungAR/PlusMenu/ApplianceItemCell.swift"
+            timestampString = "591539411.429824"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "showDetails(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SamsungAR/PlusMenu/ApplianceItemCell.swift"
+            timestampString = "591539413.736125"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "showDetails(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
