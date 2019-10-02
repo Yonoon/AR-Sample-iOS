@@ -14,6 +14,7 @@
 		272AA295233D90CB0083E9FC /* PlusMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272AA28F233D90CB0083E9FC /* PlusMenuViewModel.swift */; };
 		272AA296233D90CB0083E9FC /* PlusMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272AA290233D90CB0083E9FC /* PlusMenu.storyboard */; };
 		273E5795233B5CCB0007681F /* wm_icon_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 273E5794233B5CCB0007681F /* wm_icon_camera.png */; };
+		2785E4C1234447DD0098AD4E /* SerifImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2785E4C0234447DD0098AD4E /* SerifImage.png */; };
 		279804552339A33F005122FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279804542339A33F005122FD /* AppDelegate.swift */; };
 		2798045C2339A340005122FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2798045B2339A340005122FD /* Assets.xcassets */; };
 		2798045F2339A340005122FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2798045D2339A340005122FD /* LaunchScreen.storyboard */; };
@@ -70,6 +71,7 @@
 		272AA28F233D90CB0083E9FC /* PlusMenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlusMenuViewModel.swift; sourceTree = "<group>"; };
 		272AA290233D90CB0083E9FC /* PlusMenu.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PlusMenu.storyboard; sourceTree = "<group>"; };
 		273E5794233B5CCB0007681F /* wm_icon_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wm_icon_camera.png; sourceTree = "<group>"; };
+		2785E4C0234447DD0098AD4E /* SerifImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SerifImage.png; path = TVImage/SerifImage.png; sourceTree = "<group>"; };
 		279804512339A33F005122FD /* SamsungAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SamsungAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		279804542339A33F005122FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2798045B2339A340005122FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			children = (
 				27A6986A2339F9A4002CAFF1 /* TVImage */,
 				279804992339A3BD005122FD /* add@2x.png */,
+				2785E4C0234447DD0098AD4E /* SerifImage.png */,
 				2798049A2339A3BD005122FD /* tron_grid.png */,
 				2798049B2339A3BD005122FD /* Icon-X.png */,
 				2798049C2339A3BD005122FD /* whiteWood.jpg */,
@@ -376,6 +379,7 @@
 				279804AF2339A41A005122FD /* Main.storyboard in Resources */,
 				27A6986C2339F9AD002CAFF1 /* QN65Q7FN.png in Resources */,
 				273E5795233B5CCB0007681F /* wm_icon_camera.png in Resources */,
+				2785E4C1234447DD0098AD4E /* SerifImage.png in Resources */,
 				279804AB2339A3BD005122FD /* camera.png in Resources */,
 				279804A92339A3BD005122FD /* exit.png in Resources */,
 				6905805A2342268300E4A0CA /* PS50GAJUA.png in Resources */,

@@ -4,8 +4,8 @@
   <contributor>
    <authoring_tool>SceneKit Collada Exporter v1.0</authoring_tool>
   </contributor>
-  <created>2019-09-24T08:42:47Z</created>
-  <modified>2019-09-24T08:42:47Z</modified>
+  <created>2019-10-02T02:44:06Z</created>
+  <modified>2019-10-02T02:44:06Z</modified>
   <unit meter="1.000000"/>
   <up_axis>Y_UP</up_axis>
  </asset>
@@ -38,18 +38,20 @@
      </sampler2D>
     </newparam>
     <technique sid="common">
-     <constant>
+     <phong>
+      <diffuse>
+       <texture texture="ID2_image1" texcoord="CHANNEL2"/>
+      </diffuse>
+      <shininess>
+       <float>100</float>
+      </shininess>
       <transparency>
        <float>1</float>
       </transparency>
-     </constant>
-     <extra>
-      <technique profile="SceneKit">
-       <constant_diffuse>
-        <texture texture="ID2_image1" texcoord="CHANNEL2"/>
-       </constant_diffuse>
-      </technique>
-     </extra>
+      <index_of_refraction>
+       <float>1</float>
+      </index_of_refraction>
+     </phong>
     </technique>
    </profile_COMMON>
    <extra>
@@ -108,7 +110,7 @@
  <library_visual_scenes>
   <visual_scene id="scene10">
    <node id="node11" name="QN65Q7FN">
-    <matrix>-0.009454115 -8.527879e-15 -0.2665433 0 2.330246e-08 -0.2667095 -8.264765e-10 4.999999 -0.2665491 -2.331648e-08 0.009453848 1.45107e-08 0 0 0 1 </matrix>
+    <matrix>-0.009454117 -9.475426e-15 -0.2665433 0 2.330246e-08 -0.2667096 -8.264746e-10 4.999999 -0.2665491 -2.331648e-08 0.009453848 1.45107e-08 0 0 0 1 </matrix>
     <instance_geometry url="#QN65Q7FN">
      <bind_material>
       <technique_common>
