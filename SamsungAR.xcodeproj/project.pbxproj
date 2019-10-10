@@ -43,6 +43,7 @@
 		27CAFC73233DF080006F1496 /* DialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CAFC72233DF080006F1496 /* DialogViewController.swift */; };
 		27CF9F792339B386000644ED /* dummyAppliance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF9F782339B386000644ED /* dummyAppliance.swift */; };
 		27CF9F812339CCF5000644ED /* Appliance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF9F802339CCF5000644ED /* Appliance.swift */; };
+		27FF4299234F27740096840D /* InstagramHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FF4298234F27740096840D /* InstagramHelper.swift */; };
 		6905805A2342268300E4A0CA /* PS50GAJUA.png in Resources */ = {isa = PBXBuildFile; fileRef = 690580592342268300E4A0CA /* PS50GAJUA.png */; };
 /* End PBXBuildFile section */
 
@@ -106,6 +107,7 @@
 		27CAFC72233DF080006F1496 /* DialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogViewController.swift; sourceTree = "<group>"; };
 		27CF9F782339B386000644ED /* dummyAppliance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummyAppliance.swift; sourceTree = "<group>"; };
 		27CF9F802339CCF5000644ED /* Appliance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appliance.swift; sourceTree = "<group>"; };
+		27FF4298234F27740096840D /* InstagramHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramHelper.swift; sourceTree = "<group>"; };
 		690580592342268300E4A0CA /* PS50GAJUA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PS50GAJUA.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,11 +172,11 @@
 		279804532339A33F005122FD /* SamsungAR */ = {
 			isa = PBXGroup;
 			children = (
-				27CAFC6F233DEABC006F1496 /* ShareImage */,
-				279804982339A3BD005122FD /* ImageFiles */,
 				279804932339A3B5005122FD /* ARView */,
 				272AA28A233D90CB0083E9FC /* PlusMenu */,
 				27A6986F233A0683002CAFF1 /* ViewDetail */,
+				27CAFC6F233DEABC006F1496 /* ShareImage */,
+				279804982339A3BD005122FD /* ImageFiles */,
 				279804912339A3AC005122FD /* art.scnassets */,
 				279804542339A33F005122FD /* AppDelegate.swift */,
 				2798045B2339A340005122FD /* Assets.xcassets */,
@@ -257,10 +259,19 @@
 		27CAFC6F233DEABC006F1496 /* ShareImage */ = {
 			isa = PBXGroup;
 			children = (
+				27FF4297234F27600096840D /* Instagram */,
 				27CAFC70233DEAC9006F1496 /* DialogView.storyboard */,
 				27CAFC72233DF080006F1496 /* DialogViewController.swift */,
 			);
 			path = ShareImage;
+			sourceTree = "<group>";
+		};
+		27FF4297234F27600096840D /* Instagram */ = {
+			isa = PBXGroup;
+			children = (
+				27FF4298234F27740096840D /* InstagramHelper.swift */,
+			);
+			path = Instagram;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,6 +428,7 @@
 				27A69875233A06B6002CAFF1 /* ViewDetailsVM.swift in Sources */,
 				27CF9F792339B386000644ED /* dummyAppliance.swift in Sources */,
 				279804552339A33F005122FD /* AppDelegate.swift in Sources */,
+				27FF4299234F27740096840D /* InstagramHelper.swift in Sources */,
 				279804962339A3B5005122FD /* ViewController.swift in Sources */,
 				272AA292233D90CB0083E9FC /* PlusMenuCollectionHeader.swift in Sources */,
 				27CF9F812339CCF5000644ED /* Appliance.swift in Sources */,

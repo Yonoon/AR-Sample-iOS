@@ -59,8 +59,10 @@ public class DialogViewController: UIViewController {
 
     @IBAction func shareToInstagram(_ sender: Any) {
        //action(secondButtonText)
-
         selfDestruct()
+        guard let captureImg = self.imgView.image else { return }
+        InstagramHelper.sharedManager.postImageToInstagramWithCaption(imageInstagram: captureImg, instagramCaption: "", controller: self.presentingViewController ?? self)
+
     }
 
     @IBAction func eMail_Estimate(_ sender: Any) {
