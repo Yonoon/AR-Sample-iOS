@@ -43,6 +43,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         self.view.addSubview(sceneView)
         addPlusButton()
         addCameraButton()
+        addSwitch()
       //  self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
         
         // Register delegate
@@ -66,9 +67,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         //        //sceneView.autoenablesDefaultLighting = true;
         sceneView.scene = scene
 
-
-        
-        //sceneView.allowsCameraControl = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -116,6 +114,36 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         self.view.addSubview(button)
     }
 
+    func addSwitch() {
+        let toggleSwitch = UISwitch()
+        toggleSwitch.frame = CGRect(x: 20, y: self.view.frame.size.height - 90, width: 50, height: 20)
+        toggleSwitch.setOn(true, animated: true)
+
+        let text = UILabel()
+        text.text = "Debug"
+        text.textColor = UIColor.white
+        text.font = UIFont.systemFont(ofSize: 10.0, weight: UIFont.Weight.medium)
+        text.frame = CGRect(x: 30, y: self.view.frame.size.height - 110, width: 80, height: 20)
+
+        toggleSwitch.addTarget(self, action: #selector(onClickSwitch), for: .valueChanged)
+
+        self.view.addSubview(toggleSwitch)
+        self.view.addSubview(text)
+    }
+
+    @objc func onClickSwitch(sender: UISwitch) {
+        if sender.isOn {
+            planes.forEach { (plane) in
+                 plane.isHidden = false
+
+            }
+        } else {
+            planes.forEach { (plane) in
+                 plane.isHidden = true
+            }
+        }
+    }
+
     @objc func captureARScene() {
         let image = sceneView.snapshot()
         print("debug Snapshoe")
@@ -159,8 +187,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let plane = OverlayPlane(anchor: anchor as! ARPlaneAnchor)
         
         //같은 평면을 확장하기 위해서는 우선 발견한 모든 평면을 저장
-        //      self.planes.append(plane)
-        //       node.addChildNode(plane)
+            self.planes.append(plane)
+            node.addChildNode(plane)
         
         showDetectedLabel()
         
@@ -184,8 +212,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         let plane = self.planes.filter { plane in
             return plane.anchor.identifier == anchor.identifier
             }.first
-        
-        
+
+
         if plane == nil {
             return
         }
