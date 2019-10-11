@@ -355,8 +355,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
         //스케일 조정 - width, height, depth를 원래 크기의 0.01 만큼으로 줄여줌
         
-        if (selectedNode.name ==  "PS50GAJUA") {
+        if (selectedNode.name ==  "PS50GAJUA" ) {
             baseNode.scale = SCNVector3(0.06,0.06,0.06) //microwave
+        } else if ( selectedNode.name ==  "PI100GAJUA"){
+            baseNode.scale = SCNVector3(0.01,0.01,0.01) //laptop
         } else {
             baseNode.scale = SCNVector3(0.003,0.003,0.003)
         }
