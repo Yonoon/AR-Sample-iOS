@@ -44,8 +44,8 @@
 		27CF9F792339B386000644ED /* dummyAppliance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF9F782339B386000644ED /* dummyAppliance.swift */; };
 		27CF9F812339CCF5000644ED /* Appliance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CF9F802339CCF5000644ED /* Appliance.swift */; };
 		27FF4299234F27740096840D /* InstagramHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FF4298234F27740096840D /* InstagramHelper.swift */; };
-		27FF429B234F31A90096840D /* PI100GAJUA.png in Resources */ = {isa = PBXBuildFile; fileRef = 27FF429A234F31A90096840D /* PI100GAJUA.png */; };
-		6905805A2342268300E4A0CA /* PS50GAJUA.png in Resources */ = {isa = PBXBuildFile; fileRef = 690580592342268300E4A0CA /* PS50GAJUA.png */; };
+		27FF429B234F31A90096840D /* PI100GAZUA.png in Resources */ = {isa = PBXBuildFile; fileRef = 27FF429A234F31A90096840D /* PI100GAZUA.png */; };
+		6905805A2342268300E4A0CA /* PS50GAZUA.png in Resources */ = {isa = PBXBuildFile; fileRef = 690580592342268300E4A0CA /* PS50GAZUA.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,8 +109,8 @@
 		27CF9F782339B386000644ED /* dummyAppliance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummyAppliance.swift; sourceTree = "<group>"; };
 		27CF9F802339CCF5000644ED /* Appliance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appliance.swift; sourceTree = "<group>"; };
 		27FF4298234F27740096840D /* InstagramHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramHelper.swift; sourceTree = "<group>"; };
-		27FF429A234F31A90096840D /* PI100GAJUA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PI100GAJUA.png; sourceTree = "<group>"; };
-		690580592342268300E4A0CA /* PS50GAJUA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PS50GAJUA.png; sourceTree = "<group>"; };
+		27FF429A234F31A90096840D /* PI100GAZUA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PI100GAZUA.png; sourceTree = "<group>"; };
+		690580592342268300E4A0CA /* PS50GAZUA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PS50GAZUA.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,9 +240,9 @@
 		27A6986A2339F9A4002CAFF1 /* TVImage */ = {
 			isa = PBXGroup;
 			children = (
-				27FF429A234F31A90096840D /* PI100GAJUA.png */,
+				27FF429A234F31A90096840D /* PI100GAZUA.png */,
 				273E5794233B5CCB0007681F /* wm_icon_camera.png */,
-				690580592342268300E4A0CA /* PS50GAJUA.png */,
+				690580592342268300E4A0CA /* PS50GAZUA.png */,
 				27A6986D2339FA08002CAFF1 /* UN40LS001AF.png */,
 				27A6986B2339F9AD002CAFF1 /* QN65Q7FN.png */,
 			);
@@ -384,7 +384,7 @@
 				279804A32339A3BD005122FD /* add@2x.png in Resources */,
 				2798045F2339A340005122FD /* LaunchScreen.storyboard in Resources */,
 				279804A62339A3BD005122FD /* whiteWood.jpg in Resources */,
-				27FF429B234F31A90096840D /* PI100GAJUA.png in Resources */,
+				27FF429B234F31A90096840D /* PI100GAZUA.png in Resources */,
 				279804AA2339A3BD005122FD /* Icon-X-Grey.png in Resources */,
 				279804A42339A3BD005122FD /* tron_grid.png in Resources */,
 				27CAFC71233DEAC9006F1496 /* DialogView.storyboard in Resources */,
@@ -397,7 +397,7 @@
 				2785E4C1234447DD0098AD4E /* SerifImage.png in Resources */,
 				279804AB2339A3BD005122FD /* camera.png in Resources */,
 				279804A92339A3BD005122FD /* exit.png in Resources */,
-				6905805A2342268300E4A0CA /* PS50GAJUA.png in Resources */,
+				6905805A2342268300E4A0CA /* PS50GAZUA.png in Resources */,
 				279804A52339A3BD005122FD /* Icon-X.png in Resources */,
 				272AA293233D90CB0083E9FC /* ApplianceItemCell.xib in Resources */,
 				2798045C2339A340005122FD /* Assets.xcassets in Resources */,

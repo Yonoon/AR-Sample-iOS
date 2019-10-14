@@ -44,8 +44,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         addPlusButton()
         addCameraButton()
         addSwitch()
-      //  self.sceneView.debugOptions = [ARSCNDebugOptions.showFeaturePoints]
-        
+
         // Register delegate
         sceneView.delegate = self
         sceneView.showsStatistics = true
@@ -248,47 +247,26 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         singleTapGestureRecognizer.numberOfTapsRequired = 1
         self.sceneView.addGestureRecognizer(singleTapGestureRecognizer)
         
-        //delete
-        let doubleTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(removeObject))
-        doubleTapGestureRecognizer.numberOfTapsRequired = 2
-        self.sceneView.addGestureRecognizer(doubleTapGestureRecognizer)
-        
-        
-        //move
-        let longTPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(moveObject))
+        //remove
+        let longTPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(removeObject))
         self.sceneView.addGestureRecognizer(longTPressGestureRecognizer)
+
+        //pan
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(rotateObject))
+        panGesture.maximumNumberOfTouches = 1
+        sceneView.addGestureRecognizer(panGesture)
+
+        //move
+        let doublePanGesture = UIPanGestureRecognizer(target: self, action: #selector(moveObject))
+        doublePanGesture.minimumNumberOfTouches = 2
+        sceneView.addGestureRecognizer(doublePanGesture)
         
         //scale
         let scaleGesture = UIPinchGestureRecognizer(target: self, action: #selector(scaleObject))
         sceneView.addGestureRecognizer(scaleGesture)
-        
-        //pan
-        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(rotateObject))
-        sceneView.addGestureRecognizer(panGesture)
+
     }
 
-//        override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-//
-//            //get tep location
-//            guard let currentTouchPoint = touches.first?.location(in: self.sceneView),
-//                //2. Get The Next Feature Point Etc
-//                let hitTest = sceneView.hitTest(currentTouchPoint, types: .existingPlane).first else { return }
-//
-//
-//            //3. Convert To World Coordinates
-//            let worldTransform = hitTest.worldTransform
-//
-//            //4. Set The New Position
-//            let newPosition = SCNVector3(worldTransform.columns.3.x, worldTransform.columns.3.y, worldTransform.columns.3.z)
-//
-//            let node = getSelectedNode(currentTouchPoint)
-//            //5. Apply To The Node
-//
-//            node.simdPosition = float3(newPosition.x, newPosition.y, newPosition.z)
-//
-//        }
-
-    
     @objc func moveObject(recognizer: UILongPressGestureRecognizer) {
         //get tep location
         let sceneView = recognizer.view as! ARSCNView
@@ -355,9 +333,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
         //스케일 조정 - width, height, depth를 원래 크기의 0.01 만큼으로 줄여줌
         
-        if (selectedNode.name ==  "PS50GAJUA" ) {
+        if (selectedNode.name ==  "PS50GAZUA" ) {
             baseNode.scale = SCNVector3(0.06,0.06,0.06) //microwave
-        } else if ( selectedNode.name ==  "PI100GAJUA"){
+        } else if ( selectedNode.name ==  "PI100GAZUA"){
             baseNode.scale = SCNVector3(0.01,0.01,0.01) //laptop
         } else {
             baseNode.scale = SCNVector3(0.003,0.003,0.003)
@@ -409,54 +387,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
     }
 }
-    
-    //@objc func rotateNode(_ gesture: UIRotationGestureRecognizer){
-    //
-    //        //Tap 한 위치 정보 얻어냄
-    //        let sceneView = gesture.view as! ARSCNView
-    //        let touchLocation = gesture.location(in: sceneView)
-    //
-    //        //만약 hitTest를 통해 얻어낸 hitResult가 empty 가 아니라면 addBox(hitResult:) 실행
-    //        let nodeToRotate = getSelectedNode(touchLocation)
-    //
-    //        //1. Get The Current Rotation From The Gesture
-    //        let rotation = Float(gesture.rotation)
-    //
-    //        //2. If The Gesture State Has Changed Set The Nodes EulerAngles.y
-    //        if gesture.state == .changed{
-    //            let temp = currentAngleY - rotation
-    //            nodeToRotate.eulerAngles.y = temp < 0 ? temp * -1 : temp
-    //        }
-    //
-    //        //3. If The Gesture Has Ended Store The Last Angle Of The Cube
-    //        if(gesture.state == .ended) {
-    //            currentAngleY = nodeToRotate.eulerAngles.y
-    //
-    //        }
-    //
-    //    }
-    
-    //    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-    //
-    //        //get tep location
-    //        guard let currentTouchPoint = touches.first?.location(in: self.sceneView),
-    //            //2. Get The Next Feature Point Etc
-    //            let hitTest = sceneView.hitTest(currentTouchPoint, types: .existingPlane).first else { return }
-    //
-    //
-    //        //3. Convert To World Coordinates
-    //        let worldTransform = hitTest.worldTransform
-    //
-    //        //4. Set The New Position
-    //        let newPosition = SCNVector3(worldTransform.columns.3.x, worldTransform.columns.3.y, worldTransform.columns.3.z)
-    //
-    //        let node = getSelectedNode(currentTouchPoint)
-    //        //5. Apply To The Node
-    //
-    //        node.simdPosition = float3(newPosition.x, newPosition.y, newPosition.z)
-    //
-    //    }
-
 
 extension ViewController: SelectObjDelegate {
     func setSelectedObj(_ item: Appliance) {
