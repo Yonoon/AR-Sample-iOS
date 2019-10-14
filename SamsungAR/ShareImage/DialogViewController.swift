@@ -15,6 +15,7 @@ public class DialogViewController: UIViewController {
     @IBOutlet var imgView: UIImageView!
 
     var image: UIImage!
+    var selectedItem: [Appliance]!
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,8 +111,8 @@ extension DialogViewController: MFMailComposeViewControllerDelegate {
         let composeVC = MFMailComposeViewController()
         composeVC.mailComposeDelegate = self as MFMailComposeViewControllerDelegate
          composeVC.setCcRecipients(["digital@plaza.com"]) //수신
-        composeVC.setSubject("[견적 요청]") //제목
-        composeVC.setMessageBody("견적 내주세여!!", isHTML: false) //본문
+        composeVC.setSubject("[견적 요청] ") //제목
+        composeVC.setMessageBody("견적 내주세여!! \n \(getSelectedItemsString())", isHTML: false) //본문
         let imageData: Data = image.pngData()!
         composeVC.addAttachmentData(imageData, mimeType: "image/png", fileName: "capture.png")
         return composeVC
@@ -119,5 +120,13 @@ extension DialogViewController: MFMailComposeViewControllerDelegate {
 
     public func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
+    }
+
+    func getSelectedItemsString() -> String {
+        var str = String()
+        for item in selectedItem {
+            str.append("[\(item.category)] : \(item.type) - \(item.model) \n")
+        }
+        return str
     }
 }

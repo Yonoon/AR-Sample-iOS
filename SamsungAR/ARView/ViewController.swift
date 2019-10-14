@@ -148,11 +148,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         print("debug Snapshoe")
 
         let storyboard = UIStoryboard(name: "DialogView", bundle: nil)
-        let DialogViewController = storyboard.instantiateViewController(withIdentifier: "DialogViewController") as? DialogViewController
-        DialogViewController?.modalPresentationStyle = .overCurrentContext
-        if let DialogViewController = DialogViewController {
-            DialogViewController.image = image
-            self.present(DialogViewController, animated: true, completion: nil)
+        let dialogViewController = storyboard.instantiateViewController(withIdentifier: "DialogViewController") as? DialogViewController
+        dialogViewController?.modalPresentationStyle = .overCurrentContext
+        if let dialogViewController = dialogViewController {
+            dialogViewController.image = image
+            dialogViewController.selectedItem = selectedNodelist
+            self.present(dialogViewController, animated: true, completion: nil)
         }
         //DO SOMETHING
         //SHARE IMAGE
@@ -316,7 +317,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         //hitResult 는 많은 속성을 가지고 있는데 그 중 worldTransform.columns통해 현실에 대응하는 x, y, z 좌표를 알 수 있음
 
         baseNode.position = SCNVector3(hitResult.worldTransform.columns.3.x,hitResult.worldTransform.columns.3.y ,hitResult.worldTransform.columns.3.z)
-
 
 
         let material = SCNMaterial()
